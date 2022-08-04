@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS departments;
 
 CREATE TABLE departments (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
-  department VARCHAR(30)  
+  department VARCHAR(30) NOT NULL  
 );
 
 
@@ -20,6 +20,6 @@ CREATE TABLE employees (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
-  role_ VARCHAR(30) NULL,
-  manager VARCHAR(30) NOT NULL 
+  role_ VARCHAR(30) NULL
+  manager VARCHAR(30) NOT NULL
 );
