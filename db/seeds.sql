@@ -22,6 +22,6 @@ VALUES
 INSERT INTO departments
     (department)
 VALUES
-    ('Sales', 'James Fraser'),
-    ('Engineering', 'Derek Smith'),
-    ('Accounting', 'Alex Dryden');
+    ('Sales'),
+    ('Engineering'),
+    ('Accounting');
