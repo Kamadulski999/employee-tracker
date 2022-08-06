@@ -14,7 +14,7 @@ const getEmployee = async (userId) => {
     }
 
 const createEmployee = async (promptData) {
-    const response = await fetch('/api/users/employees', {
+    const response = await fetch('/api/employees', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: promptData
@@ -33,4 +33,4 @@ const updateEmployee = async (promptData) => {
 
    
 
-module.exports = { getEmployees, getEmployee, createEmployee, updateEmployee }
+module.exports = employeeFunctions
