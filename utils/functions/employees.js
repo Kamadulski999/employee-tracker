@@ -7,12 +7,6 @@ const getEmployees = async () => {
     console.table(data);
     }
 
-const getEmployee = async (userId) => {
-    const response = await fetch(`http://localhost:3001/api/employees/${userId}`);
-    const data = await response.json();    
-    console.table(data);
-    }
-
 const createEmployee = async (promptData) {
     const response = await fetch('/api/employees', {
     method: 'post',

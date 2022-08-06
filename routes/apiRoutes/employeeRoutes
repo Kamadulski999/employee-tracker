@@ -24,32 +24,6 @@ router.get('/employees', (req, res) => {
       });
     });
 
-// Get single employee
-router.get('/employees/:id', (req, res) => {
-    const params = [req.params.id];
-   
-    const sql = `Select employees.*, roles.salary, departments.department                
-                FROM employees
-                INNER JOIN roles ON employees.role_=roles.job_title 
-                INNER JOIN departments ON roles.dept_id=departments.id 
-                WHERE employees.id = ? `;                   
-  
-    db.query(sql, params, (err, row) => {  
-     if(row.length === 0) {
-        console.log('There is no employee with that ID number in the database')
-        return;
-     }     
-      if (err) {
-        res.status(400).json({ error: err.message });
-        return;
-      }
-      res.json({
-        message: 'success',
-        data: row
-      });
-    });
-  });
-
 router.post('/employees', ({ body},res) => {
   const sql = `INSERT INTO employees (first_name, last_name, role_, manager ) VALUES (?,?,?,?)`;
   const params = [body.first_name, body.last_name, body.role_, body.manager];
