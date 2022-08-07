@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('./db/connection');
 const apiRoutes = require('./routes/apiRoutes');
+const {prompt} = require('./utils/functions/prompts/promptHandler');
 
 
 
@@ -28,6 +29,10 @@ db.connect(err => {
     console.log(`Server running on port ${PORT}`);
   });
 });
+
+
+
+prompt();
 
 
 

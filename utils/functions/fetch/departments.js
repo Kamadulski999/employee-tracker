@@ -6,13 +6,13 @@ const getDepts = async () => {
     console.table(data);
     }
 
-const addDept = async (promptData) {
-    const response = await fetch('/api/departments', {
+const addDept = async (promptData) => { 
+    const response = await fetch('http://localhost:3001/api/departments', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
-    body: promptData
+    body: JSON.stringify(promptData)
     })
     .then(function(res){ return res.json(); })  
     };
 
-module.exports = deptFunctions
+module.exports = { getDepts, addDept }
