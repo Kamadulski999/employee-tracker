@@ -1,12 +1,12 @@
 INSERT INTO employees
     (first_name, last_name, role_, manager)
 VALUES
-    ('James', 'Fraser', 'Sales Lead'),
-    ('Bob', 'London', 'Salesperson'),
-    ('Derek', 'Smith','Lead Engineer'),
-    ('Monica', 'Cooper', 'Engineer'),
-    ('Alex', 'Dryden', 'Account Lead'),
-    ('Heather', 'Lupine', 'Accountant');
+    ('James', 'Fraser', 'Sales Lead', 'null'),
+    ('Bob', 'London', 'Sales Person', 'James Fraser'),
+    ('Derek', 'Smith','Lead Engineer', 'null'),
+    ('Monica', 'Cooper', 'Engineer', 'Derek Smith'),
+    ('Alex', 'Dryden', 'Account Lead', 'null'),
+    ('Heather', 'Lupine', 'Accountant', 'Alex Dryden');
 
 
 INSERT INTO roles
