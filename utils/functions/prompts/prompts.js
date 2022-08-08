@@ -4,7 +4,7 @@ const initialPrompt = answer => {
     return inquirer.prompt([
         {
             type: 'list',
-            message: "Welcome to the Employee Tracker App! How would like to Proceed?",
+            message: "Welcome to the Employee Tracker App! How would you like to Proceed?",
             name: 'initialList',                
             choices: ["View Departments", "View Roles", "View Employees", "Add a Department", "Add a Role", "Add an Employee", "Update an Employee Role"]
         }
